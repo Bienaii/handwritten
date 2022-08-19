@@ -8,6 +8,7 @@ function deepClone(obj) {
       if (obj === obj[key]) {
         continue;
       }
+      // 使用hasOwnProperty()方法来忽略继承属性
       if (obj.hasOwnProperty(key)) {
         // 递归调用
         result[key] = deepClone(obj[key]);

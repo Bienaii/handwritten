@@ -9,7 +9,7 @@ function throttle(fn) {
       fn.apply(this, arguments);
       // 最后在setTimeout执行完毕后再把标记设置为true(关键)表示可以执行下一次循环了。当定时器没有执行的时候标记永远是false，在开头被return掉
       flag = true;
-    });
+    }, 500);
   };
 }
 
